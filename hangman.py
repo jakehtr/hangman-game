@@ -32,7 +32,7 @@ def get_random_word():
         time.sleep(0.35)  # allowing the page to fully load before attempting to find the word
         word = browser.find_element_by_id('gennedword').text
         # making sure the word isn't too short
-        if len(word) > 6:
+        if len(word) >= 6:
             chosen_word = word.upper()
             char_replace(chosen_word)
             browser.quit()
