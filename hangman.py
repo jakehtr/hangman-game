@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from selenium import webdriver
 import time
 import string
@@ -14,8 +13,7 @@ def char_replace(word):
 
 
 def get_random_word():
-    browser = webdriver.PhantomJS('C:/Users/Jake/Downloads/phantomjs-2.1.1-windows/bin/phantomjs.exe')
-    # ('/root/phantomjs-2.1.1-linux-x86_64/bin/phantomjs')
+    browser = webdriver.PhantomJS()
     browser.get('https://www.thegamegal.com/word-generator/')
     element_game = browser.find_element_by_id('game')
     element_cat = browser.find_element_by_id('category')
