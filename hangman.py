@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 hangman.py - Gets a random word/phrase from https://www.thegamegal.com/word-generator/
 and uses it to play a game of hangman with the user.
