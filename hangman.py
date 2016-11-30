@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 """
 hangman.py - Gets a random word/phrase from all_words.txt and uses it to play a game of hangman with the user.
@@ -41,8 +40,8 @@ def hangman():
     
     while True:
         print(turn_images[turn])
-        print('\n{}'.format(' '.join(word_char_replace)))
-        print('\n{}'.format(' '.join(alphabet_upper)))
+        print('\n  {}'.format(' '.join(word_char_replace)))
+        print('\n  {}'.format(' '.join(alphabet_upper)))
         user_guess = input('Take a guess using the letters above, or try to guess the whole word: ').upper()
         if len(user_guess) == len(word):
             if user_guess == word:
@@ -69,48 +68,48 @@ def hangman():
 
 if __name__ == '__main__':
     alphabet_upper = list(ascii_uppercase)  # the letters available to the user for guessing
-    turn_images = ['  ____\n' +
-                   ' |/   |\n' +
-                   ' |     \n' +
-                   ' |      \n' +
-                   ' |      \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |      \n' +
-                   ' |      \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |    | \n' +
-                   ' |      \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |   /| \n' +
-                   ' |      \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |   /|\\\n' +
-                   ' |      \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |   /|\\\n' +
-                   ' |   /  \n' +
-                   '_|__',
-                   '  ____\n' +
-                   ' |/   |\n' +
-                   ' |    o\n' +
-                   ' |   /|\\\n' +
-                   ' |   / \\\n' +
-                   '_|__'
+    turn_images = ['    ____\n' +
+                   '   |/   |\n' +
+                   '   |     \n' +
+                   '   |      \n' +
+                   '   |      \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |      \n' +
+                   '   |      \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |    | \n' +
+                   '   |      \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |   /| \n' +
+                   '   |      \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |   /|\\\n' +
+                   '   |      \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |   /|\\\n' +
+                   '   |   /  \n' +
+                   '  _|__',
+                   '    ____\n' +
+                   '   |/   |\n' +
+                   '   |    o\n' +
+                   '   |   /|\\\n' +
+                   '   |   / \\\n' +
+                   '  _|__'
                    ]
 
     hangman()
