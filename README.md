@@ -4,13 +4,9 @@ Gets a random word/phrase from [thegamegal.com/word-generator/](https://www.theg
 ## Instructions
 Pre-requisite: You need Python 3+
 
-### Download the script and install its dependencies
+### Download the script and run it
 ```
 git clone https://github.com/jakehtr/hangman-game.git
 cd hangman-game
-pip install -r requirements.txt
-```
-### Run the script
-```
 python hangman.py
 ```
