@@ -12,13 +12,13 @@ import random
 def game_finished_check(turn, max_turn, word, word_chars):
     # player win condition
     if ''.join(word_chars) == word:
-        print('\n{}'.format(' '.join(word_chars)))
+        print('\n  {}'.format(' '.join(word_chars)))
         print('\nCongratulations! You win.')
         return True
     # player lose condition
     elif turn == max_turn:
         print(turn_images[turn])
-        print('\n{}'.format(' '.join(word_chars)))
+        print('\n  {}'.format(' '.join(word_chars)))
         print('\nGame over! The word was {}.'.format(word))
         return True
     return False
@@ -32,6 +32,7 @@ def turn_check(turn, max_turn):
 def hangman():
     turn = 0
     max_turns = 6
+    alphabet_upper = list(ascii_uppercase)  # the letters available to the user for guessing
     print('Let me think of a word...')
     sleep(1.5)
     word = random.choice(open('all_words.txt').readlines()).upper().replace('\n', '')
@@ -64,10 +65,12 @@ def hangman():
                 turn_check(turn, max_turns)
             alphabet_upper.remove(user_guess)
         if game_finished_check(turn, max_turns, word, word_char_replace):
-            break
+            play_again = input('Play again? (Y/N) ').lower().strip()
+            if play_again == 'y':
+                return hangman()
+            return
 
 if __name__ == '__main__':
-    alphabet_upper = list(ascii_uppercase)  # the letters available to the user for guessing
     turn_images = ['    ____\n' +
                    '   |/   |\n' +
                    '   |     \n' +
