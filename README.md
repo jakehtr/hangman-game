@@ -1,5 +1,5 @@
 # Hangman Game
-Gets a random word/phrase from [thegamegal.com/word-generator/](https://www.thegamegal.com/word-generator/), and uses that word/phrase to play a game of hangman with the user in the console.
+Gets a random word/phrase from all_words.txt, and uses that word/phrase to play a game of hangman with the user in the console.
 
 ## Instructions
 Pre-requisite: You need Python 3+
