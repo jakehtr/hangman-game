@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 """
 hangman.py - Gets a random word/phrase from https://www.thegamegal.com/word-generator/
