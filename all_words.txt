@@ -2194,8 +2194,7 @@ Michael Jordan
 James Taylor
 Salvador Dali
 Genghis Khan
-Charles Dickens
-PelÃ©
+Pele
 Elijah Wood
 Neil Armstrong
 Eleanor Roosevelt
@@ -2410,7 +2409,6 @@ C. S. Lewis
 Salvador Dali
 Captain Hook
 Rapunzel
-Charles Dickens
 Luke Skywalker
 Harry Houdini
 Santa Claus
