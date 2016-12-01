@@ -10,17 +10,16 @@ import random
 
 
 def game_finished_check(turn, max_turn, word, word_chars):
-    # player win condition
-    if ''.join(word_chars) == word:
-        print('\n  {}'.format(' '.join(word_chars)))
-        print('\nCongratulations! You win.')
-        return True
-    # player lose condition
-    elif turn == max_turn:
-        print(turn_images[turn])
-        print('\n  {}'.format(' '.join(word_chars)))
-        print('\nGame over! The word was {}.'.format(word))
-        return True
+    game_end = {'win': ''.join(word_chars) == word, 'lose': turn == max_turns}
+    for k, v in game_end.items():
+        if v:
+            print(turn_images[turn])
+            print('\n  {}'.format(' '.join(word_chars)))
+            if k == 'win':
+                print('\nCongratulations! You win.')
+            else:
+                print('\nGame over! The word was {}.'.format(word))
+            return True
     return False
 
 
@@ -39,6 +38,8 @@ def hangman():
     print('Aha! Got one. Game on.')
     word_char_replace = [char if char not in alphabet_upper else '_' for char in word]  # hide the word in the console
     
+    game_end = {'win': ''.join(word_char_replace) == 
+    
     while True:
         print(turn_images[turn])
         print('\n  {}'.format(' '.join(word_char_replace)))
@@ -46,8 +47,7 @@ def hangman():
         user_guess = input('Take a guess using the letters above, or try to guess the whole word: ').upper()
         if len(user_guess) == len(word):
             if user_guess == word:
-                for i in range(len(word)):
-                    word_char_replace[i] = word[i]
+                word_char_replace = list(word)
                 print('\nGreat guess!')
             else:
                 turn += 1
