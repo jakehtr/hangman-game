@@ -38,8 +38,6 @@ def hangman():
     print('Aha! Got one. Game on.')
     word_char_replace = [char if char not in alphabet_upper else '_' for char in word]  # hide the word in the console
     
-    game_end = {'win': ''.join(word_char_replace) == 
-    
     while True:
         print(turn_images[turn])
         print('\n  {}'.format(' '.join(word_char_replace)))
