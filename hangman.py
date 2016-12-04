@@ -10,7 +10,7 @@ import random
 
 
 def game_finished_check(turn, max_turn, word, word_chars):
-    game_end = {'win': ''.join(word_chars) == word, 'lose': turn == max_turns}
+    game_end = {'win': ''.join(word_chars) == word, 'lose': turn == max_turn}
     for k, v in game_end.items():
         if v:
             print(turn_images[turn])
@@ -42,7 +42,8 @@ def hangman():
         print(turn_images[turn])
         print('\n  {}'.format(' '.join(word_char_replace)))
         print('\n  {}'.format(' '.join(alphabet_upper)))
-        user_guess = input('Take a guess using the letters above, or try to guess the whole word: ').upper()
+        user_guess = input(
+            'Guess using the letters above, or try to guess the whole word (leave blank to quit): ').upper().strip()
         if len(user_guess) == len(word):
             if user_guess == word:
                 word_char_replace = list(word)
@@ -51,6 +52,8 @@ def hangman():
                 turn += 1
                 turn_check(turn, max_turns)
         elif user_guess not in alphabet_upper:
+            if user_guess == '':
+                return
             print('You can\'t use that. Try again.')
         else:
             if user_guess in word:
